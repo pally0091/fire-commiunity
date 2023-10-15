@@ -3,3 +3,6 @@
 @import "tailwindcss/utilities";
 
 /* custom css  */
+a.active {
+  color: #ff6f61;
+}
