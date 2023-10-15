@@ -4,7 +4,7 @@ import logo from "../../assets/Logo.svg";
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="flex p-2">
+    <div className="flex px-2 py-4 bg-white bg-opacity-20 backdrop-blur-md border-b border-gray-300">
       <div className="flex w-1/2 items-center">
         <div className="mx-10">
           <img
@@ -14,19 +14,19 @@ const Navbar = () => {
         </div>
         <div>
           <NavLink
-            className="mx-2 font-semibold"
+            className="mx-2 font-semibold py-2 transition-all duration-500"
             to="/"
           >
             Home
           </NavLink>
           <NavLink
-            className="mx-2 font-semibold"
+            className="mx-2 font-semibold py-2 transition-all duration-500"
             to="/blog"
           >
             Blog
           </NavLink>
           <NavLink
-            className="mx-2 font-semibold"
+            className="mx-2 font-semibold py-2 transition-all duration-500"
             to="/about"
           >
             About Us
