@@ -1,11 +1,48 @@
+/* eslint-disable no-const-assign */
+/* eslint-disable no-dupe-keys */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 
-const Button = () => {
+const Button = ({ label, primary, secondary, onClick }) => {
+  const [backgroundColor, setBackgroundColor] = useState(
+    primary ? "#FF6F61" : secondary ? "white" : "white"
+  );
+  const [color, setColor] = useState(primary ? "white" : "black");
+  const buttonStyle = {
+    padding: "8px 15px",
+    borderRadius: "8px",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "16px",
+    fontWeight: "bold",
+    margin: "5px",
+    textAlign: "center",
+    color: color,
+    backgroundColor: backgroundColor,
+    border: "2px solid black",
+    transition: "background-color 0.5s",
+  };
+
+  const handleHover = () => {
+    setColor(primary ? "black" : "white");
+    setBackgroundColor(primary ? "white" : secondary ? "#FF6F61" : "lightgray");
+  };
+
+  const handleLeave = () => {
+    setColor(primary ? "white" : "black");
+    setBackgroundColor(primary ? "#FF6F61" : secondary ? "white" : "white");
+  };
+
   return (
-    <div>
-      <p>button</p>
-    </div>
+    <button
+      style={buttonStyle}
+      onClick={onClick}
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeave}
+    >
+      {label}
+    </button>
   );
 };
 
