@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import Button from "../Utility/Button";
 const Navbar = () => {
   return (
-    <div className="flex px-2 py-4 bg-white bg-opacity-20 backdrop-blur-md border-b border-gray-300">
+    <div className="flex px-2 py-4 bg-white bg-opacity-20 backdrop-blur-xl border-b border-gray-300">
       <div className="flex w-1/2 items-center">
         <div className="mx-10">
           <img

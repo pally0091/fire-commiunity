@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import LogedoutHome from "./LogedoutHome";
 
 const Home = () => {
   return (
     <div>
-      <p>Home</p>
+      <LogedoutHome></LogedoutHome>
     </div>
   );
 };
