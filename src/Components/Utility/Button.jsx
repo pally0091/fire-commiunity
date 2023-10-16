@@ -12,7 +12,7 @@ const Button = ({ label, primary, secondary, onClick }) => {
   const buttonStyle = {
     padding: "8px 15px",
     borderRadius: "8px",
-    border: "none",
+
     cursor: "pointer",
     fontSize: "16px",
     fontWeight: "bold",
@@ -20,7 +20,7 @@ const Button = ({ label, primary, secondary, onClick }) => {
     textAlign: "center",
     color: color,
     backgroundColor: backgroundColor,
-    border: "2px solid black",
+    border: "1px solid #FF6F61",
     transition: "background-color 0.5s",
   };
 
