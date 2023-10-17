@@ -3,14 +3,15 @@
 import React from "react";
 
 const PricingCard = ({ title, price, description, isPrimary, features }) => {
-  const cardBackgroundColor = isPrimary ? "lightgray" : "#FF6F61";
-  const color = isPrimary ? "white" : "black";
-  const buttonBackgroundColor = isPrimary ? "#FF6F61" : "lightgray";
+  const cardBackgroundColor = isPrimary ? "white" : "#FF6F61";
+  const color = isPrimary ? "black" : "white";
+  const btnColor = isPrimary ? "white" : "black";
+  const buttonBackgroundColor = isPrimary ? "#FF6F61" : "white";
 
   const cardStyle = {
-    width: "200px",
-    padding: "20px",
-    margin: "10px",
+    width: "300px",
+    padding: "45px 18px",
+    margin: "auto",
     textAlign: "center",
     borderRadius: "10px",
     color: color,
@@ -25,7 +26,7 @@ const PricingCard = ({ title, price, description, isPrimary, features }) => {
     fontWeight: "bold",
     margin: "5px",
     textAlign: "center",
-    color: color,
+    color: btnColor,
     backgroundColor: buttonBackgroundColor,
     border: "1px solid #D1D5DB",
     transition: "background-color 0.5s",
@@ -33,17 +34,17 @@ const PricingCard = ({ title, price, description, isPrimary, features }) => {
 
   return (
     <div
-      className="pricing-card"
+      className="pricing-card shadow-md shadow-gray-200"
       style={cardStyle}
     >
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <p>{description}</p>
+      <h2 className="text-xl font-semibold">{title}</h2>
+      <p className="my-3">{description}</p>
       <div className="pricing-details">
-        <h1 className="text-3xl">
-          {price} <span className="text-base">/Month</span>{" "}
+        <h1 className="text-3xl font-bold my-4">
+          $ {price} <span className="text-base">/Month</span>{" "}
         </h1>
 
-        <ul>
+        <ul className="text-left my-2 list-disc px-4 text-sm">
           {features.map((feature, index) => (
             <li key={index}>{feature}</li>
           ))}

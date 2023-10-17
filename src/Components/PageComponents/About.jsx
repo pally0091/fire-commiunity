@@ -9,6 +9,7 @@ import ic3 from "../../assets/icons/icon 1.png";
 import frame from "../../assets/Frame.svg";
 import ceo from "../../assets/Ellipse 6.png";
 import map from "../../assets/map.png";
+import PriceSection from "./PriceSection";
 
 const About = () => {
   return (
@@ -124,7 +125,7 @@ const About = () => {
       </div>
       {/* prcing section  */}
       <div className="mt-20">
-        <h1>pricing</h1>
+        <PriceSection></PriceSection>
       </div>
       {/* map  */}
       <div className="w-[110%] mt-20 -mx-[5%]">
