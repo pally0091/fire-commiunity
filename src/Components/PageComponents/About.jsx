@@ -8,6 +8,7 @@ import ic2 from "../../assets/icons/icon 2.png";
 import ic3 from "../../assets/icons/icon 1.png";
 import frame from "../../assets/Frame.svg";
 import ceo from "../../assets/Ellipse 6.png";
+import map from "../../assets/map.png";
 
 const About = () => {
   return (
@@ -96,7 +97,7 @@ const About = () => {
         </div>
       </div>
       {/* ceo message  */}
-      <div className="bg-[#E5E7EB] rounded-lg px-[25%] py-[2%] mt-24">
+      <div className="bg-[#E5E7EB] rounded-lg px-5 lg:px-[25%] py-[2%] mt-24">
         <div className="w-12 mx-auto my-2">
           <img
             src={frame}
@@ -124,6 +125,13 @@ const About = () => {
       {/* prcing section  */}
       <div className="mt-20">
         <h1>pricing</h1>
+      </div>
+      {/* map  */}
+      <div className="w-[110%] mt-20 -mx-[5%]">
+        <img
+          src={map}
+          alt=""
+        />
       </div>
     </div>
   );
