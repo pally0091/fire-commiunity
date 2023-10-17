@@ -10,6 +10,7 @@ import frame from "../../assets/Frame.svg";
 import ceo from "../../assets/Ellipse 6.png";
 import map from "../../assets/map.png";
 import PriceSection from "./PriceSection";
+import ContactForm from "./ContactForm";
 
 const About = () => {
   return (
@@ -136,7 +137,36 @@ const About = () => {
       </div>
       {/* contact  */}
       <div className="mt-20">
-        <p>Contact</p>
+        <div className="w-[95%] md:w-[90%] lg:w-1/2 mx-auto">
+          <h2 className="text-3xl my-2 font-semibold">
+            Having a question? Our team is happy to assist you.
+          </h2>
+          <p className="text-[#6B7280]">
+            Ask about our services, pricing, or anything else. our highly
+            trained reps are standing by. Ready to help
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row lg:flex-row mt-16">
+          <div className="text-left my-5 w-full md:w-1/2 lg:w-1/2">
+            <h6 className="text-lg font-bold">Main Office</h6>
+            <p className="mt-3 font-semibold">Address:</p>
+            <p className="text-[#6B7280]">
+              Lorem ipsum dolor sit amet, has an nullam sadipscing ullamcorper,
+              nisl graeci minimum usu no, ne est erat deseruisse vituperata.{" "}
+              <br />
+              Lorem ipsum dolor sit amet, has an nullam sadipscing ullamcorper,
+              nisl graeci minimum usu no, ne est erat deseruisse vituperata.
+            </p>
+            <p className="mt-3 font-semibold">Email:</p>
+            <p className="text-[#FF6F61]">support@fire.com</p>
+            <p className="mt-3 font-semibold">Phone:</p>
+            <p className="text-[#6B7280]">(+1) 07123456789</p>
+          </div>
+          <div className="my-5">
+            <h6 className="text-lg font-bold mb-5">Send Us a message</h6>
+            <ContactForm></ContactForm>
+          </div>
+        </div>
       </div>
     </div>
   );
