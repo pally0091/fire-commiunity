@@ -8,7 +8,7 @@ const PriceSection = () => {
       title: "Free",
       description: "Suitable for those who just want to join or just try",
       price: 0,
-      isPrmary: true,
+      isPrmary: false,
       features: [
         "Basic profile creation ",
         "Access to community forums",
@@ -21,7 +21,7 @@ const PriceSection = () => {
       description:
         "Suitable for those who want to enjoy all the features in full",
       price: 45,
-      isPrmary: false,
+      isPrmary: true,
       features: [
         "Advanced profile customization ",
         "Enhanced search functionality",

@@ -135,7 +135,7 @@ const About = () => {
         />
       </div>
       {/* contact  */}
-      <div>
+      <div className="mt-20">
         <p>Contact</p>
       </div>
     </div>

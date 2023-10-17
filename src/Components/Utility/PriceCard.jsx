@@ -3,10 +3,10 @@
 import React from "react";
 
 const PricingCard = ({ title, price, description, isPrimary, features }) => {
-  const cardBackgroundColor = isPrimary ? "white" : "#FF6F61";
-  const color = isPrimary ? "black" : "white";
-  const btnColor = isPrimary ? "white" : "black";
-  const buttonBackgroundColor = isPrimary ? "#FF6F61" : "white";
+  const cardBackgroundColor = isPrimary ? "#FF6F61" : "white";
+  const color = isPrimary ? "white" : "black";
+  const btnColor = isPrimary ? "black" : "white";
+  const buttonBackgroundColor = isPrimary ? "white" : "#FF6F61";
 
   const cardStyle = {
     width: "300px",
