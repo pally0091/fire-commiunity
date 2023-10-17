@@ -13,8 +13,6 @@ a.active {
 #footer {
   display: flex;
   padding: 100px 69px 44px 69px;
-  flex-direction: row;
-  align-items: center;
   gap: 44px;
   color: white;
   justify-content: space-between;
