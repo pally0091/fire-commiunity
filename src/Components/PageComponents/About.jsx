@@ -121,6 +121,10 @@ const About = () => {
           </p>
         </div>
       </div>
+      {/* prcing section  */}
+      <div className="mt-20">
+        <h1>pricing</h1>
+      </div>
     </div>
   );
 };
