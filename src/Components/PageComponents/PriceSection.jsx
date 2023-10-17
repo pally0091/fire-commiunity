@@ -33,8 +33,19 @@ const PriceSection = () => {
   //   console.log(packs);
   return (
     <div>
-      <p>Price Section</p>
-      <div className="w-full md:2/3 lg:w-3/5 mx-auto flex gap-10 flex-col md:flex-row lg:flex-row justify-center">
+      <div
+        id="price-banner"
+        className="pt-16 pb-56 rounded-3xl"
+      >
+        <h2 className="text-3xl font-semibold text-white my-5">
+          Our pricing Plans
+        </h2>
+        <p className="my-5 text-white">
+          We provide 2 types of members for you according to your needs and the
+          features you want.
+        </p>
+      </div>
+      <div className="w-full md:2/3 lg:w-3/5 mx-auto flex gap-10 flex-col md:flex-row lg:flex-row justify-center -mt-48">
         {packs?.map((pack) => (
           <PriceCard
             key={pack.title}

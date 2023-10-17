@@ -134,6 +134,10 @@ const About = () => {
           alt=""
         />
       </div>
+      {/* contact  */}
+      <div>
+        <p>Contact</p>
+      </div>
     </div>
   );
 };

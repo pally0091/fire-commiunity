@@ -18,3 +18,8 @@ a.active {
   justify-content: space-between;
   align-items: flex-start;
 }
+#price-banner {
+  background-image: url(./assets/pricebg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
