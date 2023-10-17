@@ -16,7 +16,7 @@ const About = () => {
   return (
     <div className="mt-10 w-[90%] mx-auto">
       {/* head  */}
-      <div className="w-3/5 mx-auto my-5">
+      <div className="w-full md:w-1/2 lg:w-3/5 mx-auto my-5">
         <h1 className="text-5xl font-bold">We are here to help you</h1>
         <p className="text-[#6B7280]">
           Help you in the decisions you make in matters of employment, financial
