@@ -3,7 +3,20 @@
 @import "tailwindcss/utilities";
 
 /* custom css  */
+body {
+  font-family: "Inter", sans-serif;
+}
 a.active {
   color: #ff6f61;
   border-bottom: 2px solid #ff6f61;
+}
+#footer {
+  display: flex;
+  padding: 100px 69px 44px 69px;
+  flex-direction: row;
+  align-items: center;
+  gap: 44px;
+  color: white;
+  justify-content: space-between;
+  align-items: start;
 }
