@@ -16,5 +16,5 @@ a.active {
   gap: 44px;
   color: white;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
 }
