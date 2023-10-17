@@ -6,6 +6,8 @@ import i1 from "../../assets/image 6.png";
 import ic1 from "../../assets/icons/icon 3.png";
 import ic2 from "../../assets/icons/icon 2.png";
 import ic3 from "../../assets/icons/icon 1.png";
+import frame from "../../assets/Frame.svg";
+import ceo from "../../assets/Ellipse 6.png";
 
 const About = () => {
   return (
@@ -91,6 +93,32 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* ceo message  */}
+      <div className="bg-[#E5E7EB] rounded-lg px-[25%] py-[2%] mt-24">
+        <div className="w-12 mx-auto my-2">
+          <img
+            src={frame}
+            alt=""
+          />
+        </div>
+        <p className="my-2">
+          “Our goal is to create a platform for Financial Independence and Early
+          Retired to be able to grow in business like when they were working.
+          and as a place/community to share with each other”
+        </p>
+        <div className="flex items-center justify-center mt-8">
+          <div>
+            <img
+              src={ceo}
+              alt=""
+            />
+          </div>
+          <p className="mx-2 font-semibold">Mathew Moore</p>
+          <p className="px-2 border-s border-[#6B7280] text-[#6B7280]">
+            Founder & CEO
+          </p>
         </div>
       </div>
     </div>
