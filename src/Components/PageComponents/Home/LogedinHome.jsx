@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import Slider from "../../InpageComponents/Slider";
 
 const LogedinHome = () => {
   const user = "A";
@@ -17,6 +18,9 @@ const LogedinHome = () => {
             placeholder="Search"
           />
         </div>
+      </div>
+      <div className="mt-5">
+        <Slider></Slider>
       </div>
     </div>
   );

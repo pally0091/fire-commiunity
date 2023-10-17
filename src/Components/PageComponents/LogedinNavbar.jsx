@@ -15,43 +15,43 @@ const LogedinNavbar = () => {
       </div>
       <div className="flex flex-col text-left gap-4">
         <NavLink
-          className="p-3 rounded-lg font-semibold"
+          className="p-3 rounded-lg font-semibold sidenavlink"
           to="/"
         >
           <button>Home</button>
         </NavLink>
         <NavLink
-          className="p-3 rounded-lg font-semibold"
+          className="p-3 rounded-lg font-semibold sidenavlink"
           to="/forum"
         >
           <button>Forum</button>
         </NavLink>
         <NavLink
-          className="p-3 rounded-lg font-semibold"
+          className="p-3 rounded-lg font-semibold sidenavlink"
           to="/group"
         >
           <button>Group</button>
         </NavLink>
         <NavLink
-          className="p-3 rounded-lg font-semibold"
+          className="p-3 rounded-lg font-semibold sidenavlink"
           to="/course"
         >
           <button>Course</button>
         </NavLink>
         <NavLink
-          className="p-3 rounded-lg font-semibold"
+          className="p-3 rounded-lg font-semibold sidenavlink"
           to="/market"
         >
           <button>Marketplace</button>
         </NavLink>
         <NavLink
-          className="p-3 rounded-lg font-semibold"
+          className="p-3 rounded-lg font-semibold sidenavlink"
           to="/coaching"
         >
           <button>Coaching</button>
         </NavLink>
         <NavLink
-          className="p-3 rounded-lg font-semibold"
+          className="p-3 rounded-lg font-semibold sidenavlink"
           to="/jobs"
         >
           <button>Jobs</button>
