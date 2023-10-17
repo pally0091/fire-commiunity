@@ -20,7 +20,7 @@ const Button = ({ label, primary, secondary, onClick }) => {
     textAlign: "center",
     color: color,
     backgroundColor: backgroundColor,
-    border: "1px solid #FF6F61",
+    border: "1px solid #D1D5DB",
     transition: "background-color 0.5s",
   };
 
