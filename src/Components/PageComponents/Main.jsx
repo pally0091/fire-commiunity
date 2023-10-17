@@ -7,12 +7,12 @@ import LogedinNavbar from "./LogedinNavbar";
 import LogedSidebar from "./LogedSidebar";
 
 const Main = () => {
-  const user = "";
+  const user = "A";
   return (
     <>
       {user ? (
-        <div className="flex">
-          <div className="w-1/5">
+        <div className="flex bg-[#F3F4F6]">
+          <div className="w-1/5 bg-white">
             <LogedinNavbar></LogedinNavbar>
           </div>
           <div className="w-3/5">

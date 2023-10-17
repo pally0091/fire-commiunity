@@ -4,7 +4,7 @@ import LogedoutHome from "./LogedoutHome";
 import LogedinHome from "./LogedinHome";
 
 const Home = () => {
-  const user = "";
+  const user = "A";
   return (
     <>
       {user ? (
