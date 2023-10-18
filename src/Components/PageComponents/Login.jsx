@@ -1,11 +1,37 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import loginban from "../../assets/loginBan.png";
 import logo from "../../assets/Logo.svg";
+import Button from "../Utility/Button";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleRememberMeChange = () => {
+    setRememberMe(!rememberMe);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Remember Me:", rememberMe);
+    setEmail("");
+    setPassword("");
+  };
   return (
-    <div className="w-[95%] mx-auto flex flex-col md:flex-row lg:flex-row h-screen items-center justify-center p-5">
+    <div className="w-[95%] mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-center p-5">
       <div className="p-5 w-[95%] md:w-1/2 lg:w-[60%] mx-auto">
         <div>
           <img
@@ -15,12 +41,12 @@ const Login = () => {
         </div>
         <div className="mt-5">
           <h5 className="text-2xl font-semibold">Join Community</h5>
-          <p className="mt-2 px-32 text-[#a3a7b0]">
+          <p className="mt-2 md:px-8 lg:px-32 text-[#a3a7b0]">
             Join millions of community around yhe world and connect with each
             other
           </p>
         </div>
-        <div className="mt-16 text-[#a3a7b0]">
+        <div className="mt-16 text-[#a3a7b0] flex flex-wrap justify-center">
           <a
             className="mx-4"
             href=""
@@ -66,7 +92,54 @@ const Login = () => {
             <hr className="border border-[#a3a7b0] w-[45%]" />
           </div>
           <div>
-            <p>Login Form</p>
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-col text-left gap-3 my-8">
+                <label>Email:</label>
+                <input
+                  className="bg-[#f1f1f1] p-2 border-2 border-[#acaaaa] rounded-lg"
+                  type="email"
+                  placeholder="jhon@gmail.com"
+                  value={email}
+                  onChange={handleEmailChange}
+                />
+              </div>
+              <div className="flex flex-col text-left gap-3 my-8">
+                <label>Password:</label>
+                <input
+                  className="bg-[#f1f1f1] p-2 border-2 border-[#acaaaa] rounded-lg"
+                  type="password"
+                  placeholder="**********"
+                  value={password}
+                  onChange={handlePasswordChange}
+                />
+              </div>
+              <div className="flex justify-between my-5">
+                <div>
+                  <label>
+                    <input
+                      type="checkbox"
+                      className="mx-1"
+                      checked={rememberMe}
+                      onChange={handleRememberMeChange}
+                    />
+                    Remember Me
+                  </label>
+                </div>
+                <button className="text-[#ff6f61]">Forgot Password</button>
+              </div>
+              <Button
+                label="Sign In"
+                primary
+                full
+              ></Button>
+            </form>
+            <div className="mt-8">
+              <p className="text-[#a3a7b0]">Don’t have an account yet?</p>
+              <div className="">
+                <Button label="Sign up as Seller"></Button>
+                <Button label="Sign up as Member"></Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

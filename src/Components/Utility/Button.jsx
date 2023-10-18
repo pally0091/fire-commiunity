@@ -4,15 +4,17 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
-const Button = ({ label, primary, secondary, onClick }) => {
+const Button = ({ label, primary, secondary, onClick, full }) => {
   const [backgroundColor, setBackgroundColor] = useState(
     primary ? "#FF6F61" : secondary ? "white" : "white"
   );
-  const [color, setColor] = useState(primary ? "white" : "black");
+  const [color, setColor] = useState(
+    primary ? "white" : secondary ? "black" : "#ff6f61"
+  );
   const buttonStyle = {
     padding: "8px 15px",
     borderRadius: "8px",
-
+    width: full ? "100%" : "auto",
     cursor: "pointer",
     fontSize: "16px",
     fontWeight: "bold",
@@ -25,12 +27,12 @@ const Button = ({ label, primary, secondary, onClick }) => {
   };
 
   const handleHover = () => {
-    setColor(primary ? "black" : "white");
+    setColor(primary ? "black" : secondary ? "white" : "black");
     setBackgroundColor(primary ? "white" : secondary ? "#FF6F61" : "lightgray");
   };
 
   const handleLeave = () => {
-    setColor(primary ? "white" : "black");
+    setColor(primary ? "white" : secondary ? "black" : "#ff6f61");
     setBackgroundColor(primary ? "#FF6F61" : secondary ? "white" : "white");
   };
 
