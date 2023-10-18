@@ -10,6 +10,7 @@ import Marketplace from "./Components/PageComponents/Marketplace";
 import Coaching from "./Components/PageComponents/Coaching";
 import Jobs from "./Components/PageComponents/Jobs";
 import Course from "./Components/PageComponents/Course";
+import Login from "./Components/PageComponents/Login";
 
 function App() {
   const router = createBrowserRouter([
@@ -54,6 +55,10 @@ function App() {
           element: <Course></Course>,
         },
       ],
+    },
+    {
+      path: "/login",
+      element: <Login></Login>,
     },
   ]);
   return (
