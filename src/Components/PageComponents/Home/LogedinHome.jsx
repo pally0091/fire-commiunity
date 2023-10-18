@@ -2,6 +2,7 @@
 import React from "react";
 import Slider from "../../InpageComponents/Slider";
 import shape from "../../../assets/eventcardshape.png";
+import Feeds from "./Feeds";
 
 const LogedinHome = () => {
   const events = [
@@ -75,6 +76,7 @@ const LogedinHome = () => {
           ))}
         </Slider>
       </div>
+      <Feeds></Feeds>
     </div>
   );
 };

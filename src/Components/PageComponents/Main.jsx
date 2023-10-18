@@ -12,13 +12,13 @@ const Main = () => {
     <>
       {user ? (
         <div className="flex bg-[#F3F4F6]">
-          <div className="w-1/5 bg-white">
+          <div className="w-[18%] bg-white">
             <LogedinNavbar></LogedinNavbar>
           </div>
-          <div className="w-3/5">
+          <div className="w-[60%]">
             <Outlet></Outlet>
           </div>
-          <div className="w-1/5">
+          <div className="w-[22%]">
             <LogedSidebar></LogedSidebar>
           </div>
         </div>
