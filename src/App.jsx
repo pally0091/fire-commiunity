@@ -12,6 +12,7 @@ import Jobs from "./Components/PageComponents/Jobs";
 import Course from "./Components/PageComponents/Course";
 import Login from "./Components/PageComponents/Login";
 import Signup from "./Components/PageComponents/Signup";
+import PrivateRoute from "./Components/Utility/PrivateRoute";
 
 function App() {
   const router = createBrowserRouter([
@@ -33,27 +34,51 @@ function App() {
         },
         {
           path: "/forum",
-          element: <Forum></Forum>,
+          element: (
+            <PrivateRoute>
+              <Forum></Forum>
+            </PrivateRoute>
+          ),
         },
         {
           path: "/group",
-          element: <Group></Group>,
+          element: (
+            <PrivateRoute>
+              <Group></Group>
+            </PrivateRoute>
+          ),
         },
         {
           path: "/market",
-          element: <Marketplace></Marketplace>,
+          element: (
+            <PrivateRoute>
+              <Marketplace></Marketplace>
+            </PrivateRoute>
+          ),
         },
         {
           path: "/coaching",
-          element: <Coaching></Coaching>,
+          element: (
+            <PrivateRoute>
+              <Coaching></Coaching>
+            </PrivateRoute>
+          ),
         },
         {
           path: "/jobs",
-          element: <Jobs></Jobs>,
+          element: (
+            <PrivateRoute>
+              <Jobs></Jobs>
+            </PrivateRoute>
+          ),
         },
         {
           path: "/course",
-          element: <Course></Course>,
+          element: (
+            <PrivateRoute>
+              <Course></Course>
+            </PrivateRoute>
+          ),
         },
       ],
     },
