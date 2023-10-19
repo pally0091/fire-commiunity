@@ -7,7 +7,7 @@ import { BiLike } from "react-icons/bi";
 
 const PostCard = ({ title, content, author, date, likes, comments, share }) => {
   return (
-    <div className="bg-white my-2 p-2 rounded-lg">
+    <div className="bg-white my-2 p-2 rounded-lg text-left">
       <div className="flex justify-start items-center">
         <div className="w-10 mx-1">
           <img

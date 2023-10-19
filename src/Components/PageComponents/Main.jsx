@@ -16,6 +16,19 @@ const Main = () => {
             <LogedinNavbar></LogedinNavbar>
           </div>
           <div className="w-[60%]">
+            <div className="flex justify-between p-8 items-center">
+              <div className="w-1/2 text-left">
+                <h5 className="font-bold">Hi, {user}</h5>
+                <p className="text-[#9CA3AF]">Whats new with you</p>
+              </div>
+              <div className="w-1/2">
+                <input
+                  className="w-full rounded-lg p-2"
+                  type="text"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
             <Outlet></Outlet>
           </div>
           <div className="w-[22%]">
