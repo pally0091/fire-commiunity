@@ -1,13 +1,18 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import loginban from "../../assets/loginBan.png";
 import logo from "../../assets/Logo.svg";
 import Button from "../Utility/Button";
+import { AuthContext } from "../Utility/Context";
 
 const Login = () => {
+  const { loginWithEmailPass, loading, setLoading, facebookLogin } =
+    useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [error, setError] = useState();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -21,15 +26,30 @@ const Login = () => {
     setRememberMe(!rememberMe);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Remember Me:", rememberMe);
     setEmail("");
     setPassword("");
+    try {
+      const { user } = await loginWithEmailPass(email, password);
+      setCurrentUser(user);
+    } catch (err) {
+      console.log(err);
+      setError("Invalid login info!");
+    }
   };
+
+  const handleFacebookLogin = async (e) => {
+    try {
+      const { user } = await facebookLogin();
+      setCurrentUser(user);
+    } catch (err) {
+      console.log(err);
+      setError("Something went wrong!");
+    }
+  };
+
   return (
     <div className="w-[95%] mx-auto flex flex-col md:flex-row lg:flex-row items-center justify-center p-5">
       <div className="p-5 w-[95%] md:w-1/2 lg:w-[60%] mx-auto">
@@ -83,7 +103,10 @@ const Login = () => {
               Keep up with the latest developments from your community
             </p>
           </div>
-          <button className="bg-[#2b33af] text-white p-2 rounded-lg mt-8 hover:bg-blue-500">
+          <button
+            onClick={handleFacebookLogin}
+            className="bg-[#2b33af] text-white p-2 rounded-lg mt-8 hover:bg-blue-500"
+          >
             Login with Facebook
           </button>
           <div className="mt-4 flex items-center">
@@ -127,6 +150,7 @@ const Login = () => {
                 </div>
                 <button className="text-[#ff6f61]">Forgot Password</button>
               </div>
+              {error && <p className="text-red-600 ">{error}</p>}
               <Button
                 label="Sign In"
                 primary

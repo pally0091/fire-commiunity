@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <>
       {user ? (
-        <div className="flex bg-[#F3F4F6]">
+        <div className="flex bg-[#F3F4F6] ">
           <div className="w-[18%] bg-white">
             <LogedinNavbar></LogedinNavbar>
           </div>

@@ -10,7 +10,7 @@ import RecomandForum from "./Home/RecomandForum";
 const LogedSidebar = () => {
   const user = "A";
   return (
-    <div className="py-10 px-2 bg-white">
+    <div className="py-10 px-2 bg-white sticky top-0">
       <div className="flex items-center">
         <div className="flex items-center w-[70%]">
           <div className="w-[15%]">
