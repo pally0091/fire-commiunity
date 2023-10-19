@@ -11,6 +11,7 @@ import Coaching from "./Components/PageComponents/Coaching";
 import Jobs from "./Components/PageComponents/Jobs";
 import Course from "./Components/PageComponents/Course";
 import Login from "./Components/PageComponents/Login";
+import Signup from "./Components/PageComponents/Signup";
 
 function App() {
   const router = createBrowserRouter([
@@ -59,6 +60,10 @@ function App() {
     {
       path: "/login",
       element: <Login></Login>,
+    },
+    {
+      path: "/register",
+      element: <Signup></Signup>,
     },
   ]);
   return (

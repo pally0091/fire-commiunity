@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import LogedoutHome from "./LogedoutHome";
 import LogedinHome from "./LogedinHome";
+import { AuthContext } from "../../Utility/Context";
 
 const Home = () => {
-  const user = "A";
+  const { user } = useContext(AuthContext);
   return (
     <>
       {user ? (

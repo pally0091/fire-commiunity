@@ -4,10 +4,10 @@ import loginban from "../../assets/loginBan.png";
 import logo from "../../assets/Logo.svg";
 import Button from "../Utility/Button";
 import { AuthContext } from "../Utility/Context";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const Login = () => {
-  const { loginWithEmailPass, loading, setLoading, facebookLogin } =
+const Signup = () => {
+  const { createUser, loading, setLoading, facebookLogin } =
     useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,7 +37,7 @@ const Login = () => {
     setEmail("");
     setPassword("");
     try {
-      const { user } = await loginWithEmailPass(email, password);
+      const { user } = await createUser(email, password);
       setCurrentUser(user);
     } catch (err) {
       console.log(err);
@@ -157,7 +157,7 @@ const Login = () => {
               </div>
               {error && <p className="text-red-600 ">{error}</p>}
               <Button
-                label="Sign In"
+                label="Sign Up"
                 primary
                 full
               ></Button>
@@ -176,4 +176,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

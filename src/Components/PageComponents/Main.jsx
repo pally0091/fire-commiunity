@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import LogedinNavbar from "./LogedinNavbar";
 import LogedSidebar from "./LogedSidebar";
+import { AuthContext } from "../Utility/Context";
 
 const Main = () => {
-  const user = "A";
+  const { user } = useContext(AuthContext);
   return (
     <>
       {user ? (
@@ -18,7 +19,9 @@ const Main = () => {
           <div className="w-[60%]">
             <div className="flex justify-between p-8 items-center">
               <div className="w-1/2 text-left">
-                <h5 className="font-bold">Hi, {user}</h5>
+                <h5 className="font-bold">
+                  Hi, {user.displayName ? user.displayName : "N/A"}
+                </h5>
                 <p className="text-[#9CA3AF]">Whats new with you</p>
               </div>
               <div className="w-1/2">

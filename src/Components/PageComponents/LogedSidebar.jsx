@@ -1,14 +1,15 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import userI from "../../assets/user.png";
 import { IoMdCart } from "react-icons/io";
 import { BsBellFill } from "react-icons/bs";
 import MyEvents from "./Home/MyEvents";
 import PromotedJob from "./Home/PromotedJob";
 import RecomandForum from "./Home/RecomandForum";
+import { AuthContext } from "../Utility/Context";
 
 const LogedSidebar = () => {
-  const user = "A";
+  const { user, logOut } = useContext(AuthContext);
   return (
     <div className="py-10 px-2 bg-white sticky top-0">
       <div className="flex items-center">
@@ -21,7 +22,9 @@ const LogedSidebar = () => {
             />
           </div>
           <div className="ms-2 text-left">
-            <h6 className="font-bold">{user}</h6>
+            <h6 className="font-bold">
+              {user.displayName ? user.displayName : "N/A"}
+            </h6>
             <p>User Type</p>
           </div>
         </div>
