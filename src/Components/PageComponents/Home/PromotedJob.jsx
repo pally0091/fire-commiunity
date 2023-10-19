@@ -36,7 +36,7 @@ const PromotedJob = () => {
           </div>
           <div className="text-left w-[60%]">
             <h6 className="font-bold">{job.title}</h6>
-            <p>{job.company}</p>
+            <p className="text-gray-400">{job.company}</p>
           </div>
           <div className="w-[25%]">
             {job.apply ? (
