@@ -41,13 +41,13 @@ const PromotedJob = () => {
           <div className="w-[25%]">
             {job.apply ? (
               <button
-                className="py-1 px-2 bg-gray-600 rounded-lg"
+                className="py-1 px-2 bg-gray-600 rounded-lg text-white"
                 disabled
               >
                 Applied
               </button>
             ) : (
-              <button className="py-1 px-2 bg-[#fc7163] rounded-lg">
+              <button className="py-1 px-2 bg-[#fc7163] rounded-lg text-white">
                 Apply
               </button>
             )}
