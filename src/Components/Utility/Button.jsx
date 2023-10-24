@@ -4,7 +4,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
-const Button = ({ label, primary, secondary, onClick, full }) => {
+const Button = ({ children, label, primary, secondary, onClick, full }) => {
   const [backgroundColor, setBackgroundColor] = useState(
     primary ? "#FF6F61" : secondary ? "white" : "white"
   );
@@ -43,7 +43,7 @@ const Button = ({ label, primary, secondary, onClick, full }) => {
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
     >
-      {label}
+      {label} {children}
     </button>
   );
 };
