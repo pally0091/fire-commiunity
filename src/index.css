@@ -26,3 +26,7 @@ a.active {
 .scrollbar::-webkit-scrollbar {
   width: 0;
 }
+.mobilenav-link.active button {
+  color: white;
+  background: #ff6f61;
+}
