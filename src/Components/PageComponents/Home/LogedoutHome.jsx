@@ -17,8 +17,8 @@ const LogedoutHome = () => {
   return (
     <div className="w-[90%] mx-auto">
       {/* head  */}
-      <div className="flex items-center px-5 py-5">
-        <div className="w-1/2 p-5">
+      <div className="flex flex-col md:flex-row lg:flex-row items-center px-5 py-5">
+        <div className="w-full md:w-1/2 lg:w-1/2 p-5">
           <h1 className="text-4xl my-4 font-semibold text-left">
             Welcome to the <span className="text-[#FF6F61]">FIRE</span>{" "}
             community
@@ -38,7 +38,7 @@ const LogedoutHome = () => {
             ></Button>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2 lg:w-1/2">
           <img
             src={commiunity}
             alt=""
@@ -46,7 +46,7 @@ const LogedoutHome = () => {
         </div>
       </div>
       {/* head-underSection  */}
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
         <div className="flex  text-left items-start">
           <div className="mx-4 w-24 ">
             <img
@@ -95,14 +95,14 @@ const LogedoutHome = () => {
       </div>
       {/* events  */}
       <div className="mt-24 mb-20">
-        <div className="w-1/2 mx-auto">
+        <div className="w-full md:w-1/2 lg:w-1/2 mx-auto">
           <h1 className="text-4xl my-4 font-semibold ">Upcoming Events</h1>
           <p className="my-4 text-sm">
             You can relay on our amazing features list and also our customer
             services will be great experience for you without doubt
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-6 my-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 my-8">
           <card className="text-left">
             <div>
               <img
@@ -175,8 +175,8 @@ const LogedoutHome = () => {
         </div>
       </div>
       {/* featured product  */}
-      <div className="flex items-center mt-10">
-        <div className="w-1/2 p-2 text-justify">
+      <div className="flex flex-col md:flex-row lg:flex-row items-center mt-10">
+        <div className="w-full md:w-1/2 lg:w-1/2 p-2 text-justify">
           <h3 className="font-bold text-3xl">Featured Products</h3>
           <p className="text-[#6B7280] my-2">
             Don't miss out on this opportunity to expand your knowledge and
@@ -188,7 +188,7 @@ const LogedoutHome = () => {
             primary
           ></Button>
         </div>
-        <div className="w-1/2 grid grid-cols-2 gap-3 px-5">
+        <div className="w-full md:w-1/2 lg:w-1/2 grid grid-cols-2 gap-3 px-5">
           <div>
             <div>
               <img
@@ -225,15 +225,15 @@ const LogedoutHome = () => {
       </div>
       {/* communities  */}
       <div className="mt-20">
-        <div className="w-1/2 mx-auto mb-5">
+        <div className="w-full md:w-1/2 lg:w-1/2 mx-auto mb-5">
           <h3 className="text-2xl font-bold my-2">Community Highlights</h3>
           <p className="my-2 text-[#6B7280]">
             Highlights of various kinds of communities that are trending and
             widely discussed
           </p>
         </div>
-        <div className="flex">
-          <div className="w-1/2 p-10 text-justify">
+        <div className="flex flex-col md:flex-row lg:flex-row">
+          <div className="w-full md:w-1/2 lg:w-1/2 p-10 text-justify">
             <h5 className="text-xl font-semibold my-3">Design With Pleasure</h5>
             <p className="text-[#374151]">
               ed vel tempor nisl, quis hendrerit ligula. Aenean mattis sapien in
@@ -256,7 +256,7 @@ const LogedoutHome = () => {
               ></Button>
             </div>
           </div>
-          <div className="w-1/2 p-10 text-justify">
+          <div className="w-full md:w-1/2 lg:w-1/2 p-10 text-justify">
             <h5 className="text-xl font-semibold my-3">Design With Pleasure</h5>
             <p className="text-[#374151]">
               ed vel tempor nisl, quis hendrerit ligula. Aenean mattis sapien in

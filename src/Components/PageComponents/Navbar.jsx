@@ -6,7 +6,7 @@ import Button from "../Utility/Button";
 const Navbar = () => {
   return (
     <div className="flex px-2 py-4 bg-white bg-opacity-20 backdrop-blur-xl border-b border-gray-300">
-      <div className="flex w-1/2 items-center">
+      <div className="flex flex-col md:flex-row lg:flex-row w-1/2 items-center">
         <div className="mx-10">
           <img
             src={logo}
@@ -34,7 +34,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex justify-end w-1/2">
+      <div className="flex justify-end items-center w-1/2">
         <Link to="/login">
           <Button
             label="Login"
