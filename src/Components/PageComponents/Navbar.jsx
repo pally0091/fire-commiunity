@@ -42,7 +42,24 @@ const Navbar = () => {
             </NavLink>
           </div>
         </div>
-        <button onClick={menuHandler}>
+        <div className="hidden md:flex lg:flex ">
+          <Link to="/login">
+            <Button
+              label="Login"
+              secondary
+            ></Button>
+          </Link>
+          <Link to="/register">
+            <Button
+              label="Get started"
+              primary
+            ></Button>
+          </Link>
+        </div>
+        <button
+          className="block md:hidden lg:hidden"
+          onClick={menuHandler}
+        >
           {menuOpen ? (
             <AiOutlineClose></AiOutlineClose>
           ) : (
