@@ -39,8 +39,8 @@ const Marketplace = () => {
         <hr className="border-2 w-32 border-[#f97365]" />
         <FeaturedProduct></FeaturedProduct>
       </div>
-      <div className="flex gap-5">
-        <div className="w-1/2">
+      <div className="flex flex-col-reverse md:flex-row lg:flex-row gap-5">
+        <div className="w-full md:w-1/2 lg:w-1/2">
           <p className="font-semibold text-left mt-5 mx-4  py-2 ">
             Popular Product
           </p>
@@ -48,7 +48,7 @@ const Marketplace = () => {
           <ProductCard></ProductCard>
           <ProductCard></ProductCard>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2 lg:w-1/2">
           <p className="font-semibold text-left mt-5 mx-4 py-2 ">
             Recommanded for you
           </p>

@@ -72,11 +72,11 @@ const Forum = () => {
       </div>
       <div className="border bg-white flex items-center border-gray-700 w-[90%] mx-auto rounded-lg p-2">
         <input
-          className="w-[95%]"
+          className="w-[92%] md:w-[92%] lg:w-[95%]"
           placeholder="Add new thread"
           type="text"
         />
-        <button className="w-[5%] text-center bg-[#f97365] p-2 rounded-lg text-white">
+        <button className="w-[8%] md:w-[8%] lg:w-[5%] text-center bg-[#f97365] p-2 rounded-lg text-white">
           <AiOutlinePlus></AiOutlinePlus>
         </button>
       </div>

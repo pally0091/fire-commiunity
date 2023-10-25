@@ -4,7 +4,7 @@ import thumb from "../../assets/thumb1.png";
 
 const FeaturedCourse = () => {
   return (
-    <div className="mt-5 grid grid-cols-3 gap-4">
+    <div className="mt-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
       <div className="bg-white p-2 rounded-lg flex text-sm items-center text-left gap-2">
         <div className="w-10">
           <img

@@ -13,7 +13,7 @@ const CourseCat = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-2 gap-4 mt-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-5">
       {courses.map((course) => (
         <div
           key={course.name}
