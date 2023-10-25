@@ -1,19 +1,79 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/Logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import { AiFillBook, AiFillHome } from "react-icons/ai";
 import { MdGroupWork, MdWork } from "react-icons/md";
 import { BiSolidGraduation, BiSolidGroup } from "react-icons/bi";
-import { BsBagDashFill } from "react-icons/bs";
+import { BsBagDashFill, BsBellFill } from "react-icons/bs";
+import { AuthContext } from "../Utility/Context";
+import userI from "../../assets/user.png";
+import { IoMdCart } from "react-icons/io";
 const MobileNav = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const [isDropdown, setIsDropdown] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdown(!isDropdown);
+  };
+  const Logout = () => {
+    logOut()
+      .then(() => {})
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className=" px-2 py-4 bg-white bg-opacity-20 backdrop-blur-xl border-b border-gray-300">
-      <div className="px-4">
-        <img
-          src={logo}
-          alt=""
-        />
+      <div className="flex justify-between">
+        <div className="px-4">
+          <img
+            src={logo}
+            alt=""
+          />
+        </div>
+        <div className="flex items-center w-1/2">
+          <div className="flex items-center w-[70%]">
+            <div
+              className="w-[15%] relative group"
+              onClick={toggleDropdown}
+            >
+              <div className=" relative">
+                <img
+                  className="w-full rounded-full"
+                  src={user.thumbnail ? user.thumbnail : userI}
+                  alt=""
+                />
+              </div>
+              {isDropdown && (
+                <div className="absolute top-0 left-0 mt-12 p-2 bg-white border rounded shadow-lg">
+                  <button className="block w-full text-left">Profile</button>
+                  <button className="block w-full text-left">Settings</button>
+                  <button
+                    className="block w-full text-left text-red-500"
+                    onClick={Logout}
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className="ms-2 text-left">
+              <h6 className="font-bold">
+                {user.displayName ? user.displayName : "N/A"}
+              </h6>
+              <p>User Type</p>
+            </div>
+          </div>
+          <div className="w-[30%] grid grid-cols-2 gap-2">
+            <button className="bg-gray-400 p-1 rounded-xl text-lg">
+              <IoMdCart></IoMdCart>
+            </button>
+            <button className="bg-gray-400 p-1 rounded-xl text-lg">
+              <BsBellFill></BsBellFill>
+            </button>
+          </div>
+        </div>
       </div>
       <ul className="flex gap-2 mt-5 items-center justify-around">
         <li>
