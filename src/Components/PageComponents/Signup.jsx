@@ -4,7 +4,7 @@ import loginban from "../../assets/loginBan.png";
 import logo from "../../assets/Logo.svg";
 import Button from "../Utility/Button";
 import { AuthContext } from "../Utility/Context";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const { createUser, loading, setLoading, facebookLogin } =
@@ -165,8 +165,9 @@ const Signup = () => {
             <div className="mt-8">
               <p className="text-[#a3a7b0]">Don’t have an account yet?</p>
               <div className="">
-                <Button label="Sign up as Seller"></Button>
-                <Button label="Sign up as Member"></Button>
+                <Link to="/login">
+                  <Button label="Already a member"></Button>
+                </Link>
               </div>
             </div>
           </div>

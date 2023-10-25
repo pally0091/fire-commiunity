@@ -17,7 +17,7 @@ const LogedoutHome = () => {
   return (
     <div className="w-[90%] mx-auto">
       {/* head  */}
-      <div className="flex flex-col md:flex-row lg:flex-row items-center px-5 py-5">
+      <div className="flex flex-col md:flex-row lg:flex-row items-center px-2 py-5">
         <div className="w-full md:w-1/2 lg:w-1/2 p-5">
           <h1 className="text-4xl my-4 font-semibold text-left">
             Welcome to the <span className="text-[#FF6F61]">FIRE</span>{" "}
@@ -38,6 +38,7 @@ const LogedoutHome = () => {
             ></Button>
           </div>
         </div>
+
         <div className="w-full md:w-1/2 lg:w-1/2">
           <img
             src={commiunity}
